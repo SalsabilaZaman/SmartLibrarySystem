@@ -2,8 +2,13 @@ const LoanRepository = require('../repositories/LoanRepository');
 const axios = require('axios');
 const HttpClient = require('./HttpClient');
 
-const USER_SERVICE_URL = process.env.USER_SERVICE_URL || 'http://user-service:8081';
-const BOOK_SERVICE_URL = process.env.BOOK_SERVICE_URL || 'http://book-service:8082';
+// const USER_SERVICE_URL = process.env.USER_SERVICE_URL || 'http://user-service:3000';
+// const BOOK_SERVICE_URL = process.env.BOOK_SERVICE_URL || 'http://book-service:3001';
+
+
+const USER_SERVICE_URL = 'http://user-container:8081';
+const BOOK_SERVICE_URL = 'http://book-container:8082';
+
 
 const userService = new HttpClient(USER_SERVICE_URL);
 const bookService = new HttpClient(BOOK_SERVICE_URL);
